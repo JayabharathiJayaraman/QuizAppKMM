@@ -3,11 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeScreenFrragment">
+    app:startDestination="@id/homeScreenFragment">
 
     <fragment
-        android:id="@+id/homeScreenFrragment"
-        android:name="com.example.quizapp.android.HomeScreenFrragment"
-        android:label="fragment_home_screen_frragment"
-        tools:layout="@layout/fragment_home_screen_frragment" />
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.quizapp.android.ui.home.HomeScreenFragment"
+        android:label="fragment_home_screen_fragment"
+        tools:layout="@layout/fragment_home_screen_fragment">
+
+        <action
+            android:id="@+id/navigate_from_homeScreenFragment_to_newQuizFragment"
+            app:destination="@id/newQuizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newQuizFragment"
+        android:name="com.example.quizapp.android.ui.newQuiz.NewQuizFragment"
+        android:label="fragment_new_quiz"
+        tools:layout="@layout/fragment_new_quiz">
+        <action
+            android:id="@+id/navigate_from_newQuizFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.quizapp.android.ui.question.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" />
 </navigation>   

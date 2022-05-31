@@ -3,6 +3,7 @@
     package="com.example.quizapp.android">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="false"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
